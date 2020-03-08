@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <!--first add colors to colors.xml file, then change the them color-->
+
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="colorAccent">@color/dark_orange</item>
+
+        <!--now  change font family with api 16+ -->
+        <item name="android:fontFamily">monospace</item>
+
+        <item name="android:textStyle">bold</item>
+
+        <!-- play with these properties
+                shadowColor
+                shadowDx - horizontal offset
+                shadowDy - vertical offset
+                shadowRadius
+                textAllCaps
+                textColor
+                textColorHighlight
+                textColorHint
+                textColorLink
+                textSize
+                textStyle
+                typeface (normal, sans, serif, monospace)
+                -->
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+    </style>
+    <!--The only way to change your app font is by changing in activity_main : android.support.v7.widget.Toolbar
+        and change app:popupTheme="@style/AppTheme.PopupOverlay" for android:theme="@style/AppTheme.PopupOverlay"
+        now you are able to change android:fontFamily as shown below.
+        Additionally if you want to change fonts, go to https://fonts.google.com and download them
+        create a font folder and place the fonts inside. After you will be able to access the fonts using
+        @font/...
+     -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:fontFamily">@font/shadowsintolight_regular</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+
+
+    </style>
+
+
+    <style name="TextView1">
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TextInputEditText" parent="@style/TextView1">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+        <!-- overriding this to be normal instead of bold ( as defined in TextView1 )
+            and the color orange is from the main theme:  AppTheme
+        -->
+
+    </style>
+
+    <!-- you can both inherit and add to a style as well
+        TextView1.TexView2 is a more specialised version of TextView1 -->
+    <style name="TextView1.TextView2">
+        <item name="android:padding">20dp</item>
+    </style>
+
+    <style name="TextView1.TextView2.TextView3">
+        <item name="android:textColor">@color/royal_blue</item>
+
+    </style>
+
+</resources>
